@@ -6,25 +6,25 @@
 
 [] Build an Image
 
-  [] Create Template
+---  [] Create Template
 
-  [] Build First Image with AWS EC2 AMI
+---  [] Build First Image with AWS EC2 AMI
 
-  [] Learn How to Manage Image
+---  [] Learn How to Manage Image
 
 [] Provision
 
-  [] Configure Provisioners
+---  [] Configure Provisioners
 
-  [] Launch AMI
+---  [] Launch AMI
 
 [] Investigate Parallel Builds
 
 [] Investigate Vagrant Boxes
 
-  [] Enable Post-Processor
+---  [] Enable Post-Processor
 
-  [] Learn how to use Post-Processor
+---  [] Learn how to use Post-Processor
 
 ## Questions, comments, concerns, etc.
 
