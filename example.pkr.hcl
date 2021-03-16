@@ -14,11 +14,11 @@ locals { timestamp = regex_replace(timestamp(), "[- TZ:]", "") }
 # post-processors on an instance created by the source.
 source "amazon-ebs" "example" {
   
-#  access_key    = "${var.aws_access_key}"
+# removed -access_key    = "${var.aws_access_key}"
   ami_name      = "packer example ${local.timestamp}"
   instance_type = "t2.micro"
   region        = "us-east-1"
-#  secret_key    = "${var.aws_secret_key}"
+# removed - secret_key    = "${var.aws_secret_key}"
   source_ami_filter {
     filters = {
       name                = "ubuntu/images/*ubuntu-xenial-16.04-amd64-server-*"
@@ -35,6 +35,13 @@ source "amazon-ebs" "example" {
 build {
   sources = ["source.amazon-ebs.example"]
 
+  provisioner "shell" {
+    inline = [
+      "sleep 30",
+      "sudo apt-get update",
+      "sudo apt-get install -y redis-server",
+    ]
+  }
 }
 
 
