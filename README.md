@@ -16,21 +16,13 @@
 
   * Using the packer build command, my first image with AWS EC2 was born.
 
----  [] Learn How to Manage Image
+---  [/] Learn How to Manage Image
 
-[] Provision
+[/] Provision
 
----  [] Configure Provisioners
+---  [/] Configure Provisioners
 
----  [] Launch AMI
-
-[] Investigate Parallel Builds
-
-[] Investigate Vagrant Boxes
-
----  [] Enable Post-Processor
-
----  [] Learn how to use Post-Processor
+---  [/] Launch AMI
 
 ## Questions, comments, concerns, etc.
 
@@ -48,7 +40,7 @@ Packer is a Hashicrop IaC tool that makes automating machine image creation easy
 
 ## Issues
 
-1. During the "Verify Template" stage, I ran into an issue with the example template from Learn Docs. The issue was with two specific lines. These lines have been commented out of the _example.pkr.hcl_ template file. After removing these lines, packer was able to verify the template.
+1. During the "Verify Template" stage, I ran into an issue with the example template from Learn Docs. The issue was with two specific lines. Since the credentials are already set via an `.aws/credentials` file, these lines have been commented out of the _example.pkr.hcl_ template file. After removing these lines, packer was able to verify the template.
 
 ```
   access_key    = "${var.aws_access_key}"
